@@ -71,11 +71,13 @@ section.blk{padding:88px 0 8px}
 .sh small{font-family:'Geist Mono',monospace;font-weight:400;font-size:13px;letter-spacing:0;color:var(--muted)}
 
 /* intent band */
-.ask{margin-top:72px;background:#f2f4f9;border-top:1px solid var(--line)}
+.ask{margin:0 calc(50% - 50vw);background:#f2f4f9;border-top:1px solid #dfe3ec}
+#projects .sh{border-bottom:0}
 .ask a{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:4px 16px;padding:28px 18px;border-bottom:1px solid #dfe3ec;text-decoration:none;color:var(--fg);max-width:none}
 .ask .k{grid-column:1;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .ask .v{grid-column:1;font-family:'Stack Sans Headline',sans-serif;font-weight:500;font-size:clamp(22px,5.8vw,32px);line-height:1.25;letter-spacing:-.02em;margin-top:8px}
-.ask .ar{grid-column:2;grid-row:1/3;color:var(--acc);font-size:24px;transition:transform .2s ease}
+.ask .d{grid-column:1;color:var(--muted);font-size:15px;line-height:1.55;margin-top:8px;max-width:560px}
+.ask .ar{grid-column:2;grid-row:1/4;color:var(--acc);font-size:24px;transition:transform .2s ease}
 .ask a:hover .ar{transform:translate(3px,-3px)}
 .ask a:hover{background:#e9edf6}
 
@@ -93,7 +95,7 @@ section.blk{padding:88px 0 8px}
 /* services */
 .svc{display:grid;grid-template-columns:minmax(0,1fr)}
 .svc{border:1px solid var(--line);gap:0}
-.sv{display:flex;flex-direction:column;padding:28px 22px 0;border-bottom:1px solid var(--line)}
+.sv{display:flex;flex-direction:column;padding:28px 22px 30px;border-bottom:1px solid var(--line)}
 .sv:last-child{border-bottom:0}
 .sv .n{font-family:'Geist Mono',monospace;font-size:13px;color:var(--acc);margin-bottom:34px}
 .sv h3{font-size:clamp(30px,8.2vw,40px);line-height:1.04;letter-spacing:-.04em;margin:0}
@@ -187,6 +189,7 @@ section.blk{padding:88px 0 8px}
   .sv:nth-last-child(-n+3){border-bottom:0}
   .sv:nth-child(-n+3){border-bottom:1px solid var(--line)}
   .ask a{padding:30px max(40px,calc((100vw - 1080px)/2))}
+  .ask .v{font-size:36px}
   .ts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 48px}
   .ts .col{min-width:0}
   .fcols{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -225,59 +228,28 @@ section.blk{padding:88px 0 8px}
       <p class="t">I also design, so what I ship tends to look as considered as it runs.</p>
       <div class="cta"><a class="btn pri" href="#resume">View resume <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></a></div>
     </section>
-  </div>
-
-  <section class="ask" aria-label="Ways I can help">
-    <a href="mailto:chinonsohensley@gmail.com?subject=AI%20training%20%26%20data"><span class="k">Train an AI model</span><span class="v">Label, evaluate and rate data with care.</span><span class="ar" aria-hidden="true">↗</span></a>
-    <a href="mailto:chinonsohensley@gmail.com?subject=Cybersecurity"><span class="k">Secure a system</span><span class="v">Check the basics before attackers do.</span><span class="ar" aria-hidden="true">↗</span></a>
-    <a href="mailto:chinonsohensley@gmail.com?subject=Software%20%26%20automation"><span class="k">Build a tool</span><span class="v">Automate the work that eats your hours.</span><span class="ar" aria-hidden="true">↗</span></a>
-  </section>
-  <div class="wrap">
 
     <section class="blk" id="projects" aria-labelledby="work-h">
       <h2 class="sh" id="work-h">Projects. <small>01</small></h2>
-      <div class="works">
-        <a class="wk" href="https://github.com/Jeremysley" rel="noopener">
-          <span class="code" aria-hidden="true">@bot.event
-async def on_message(m):
-    if flagged(m): await m.delete()</span>
-          <div><span class="n">01</span><h3>Hydris</h3><p>A Discord moderation bot written in Python to help keep community servers safe and in order.</p></div>
-          <div class="tags"><span>Python</span><span>discord.py</span><span>Automation</span></div>
-        </a>
-        <a class="wk" href="https://github.com/Jeremysley" rel="noopener">
-          <span class="code" aria-hidden="true">class Inventory {
-  map&lt;string,Item&gt; stock;
-};</span>
-          <div><span class="n">02</span><h3>LASU Supermarket Management System</h3><p>A group project: a management system for a supermarket, built in C++.</p></div>
-          <div class="tags"><span>C++</span><span>OOP</span><span>Group project</span></div>
-        </a>
-        <a class="wk" href="https://github.com/Jeremysley" rel="noopener">
-          <span class="code" aria-hidden="true">for f in files:
-    move(f, by_type(f))</span>
-          <div><span class="n">03</span><h3>Python automation scripts</h3><p>Small tools that save hours: a file organiser, a CSV cleaner and a web scraper.</p></div>
-          <div class="tags"><span>Python</span><span>pandas</span><span>Scraping</span></div>
-        </a>
-        <a class="wk" href="https://github.com/Jeremysley" rel="noopener">
-          <span class="code" aria-hidden="true">@media (min-width:900px) {
-  .grid { columns: 2 }
-}</span>
-          <div><span class="n">04</span><h3>Responsive websites</h3><p>Websites built from scratch in HTML, CSS and JavaScript, with a focus on usability, accessibility and performance.</p></div>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-        </a>
-      </div>
+    <div class="ask">
+      <a href="https://github.com/Jeremysley" rel="noopener"><span class="k">01 · Python · discord.py · Automation</span><span class="v">Hydris</span><span class="d">A Discord moderation bot written in Python to help keep community servers safe and in order.</span><span class="ar" aria-hidden="true">↗</span></a>
+      <a href="https://github.com/Jeremysley" rel="noopener"><span class="k">02 · C++ · OOP · Group project</span><span class="v">LASU Supermarket Management System</span><span class="d">A group project: a management system for a supermarket, built in C++.</span><span class="ar" aria-hidden="true">↗</span></a>
+      <a href="https://github.com/Jeremysley" rel="noopener"><span class="k">03 · Python · pandas · Scraping</span><span class="v">Python automation scripts</span><span class="d">Small tools that save hours: a file organiser, a CSV cleaner and a web scraper.</span><span class="ar" aria-hidden="true">↗</span></a>
+      <a href="https://github.com/Jeremysley" rel="noopener"><span class="k">04 · HTML · CSS · JavaScript</span><span class="v">Responsive websites</span><span class="d">Websites built from scratch in HTML, CSS and JavaScript, with a focus on usability, accessibility and performance.</span><span class="ar" aria-hidden="true">↗</span></a>
+    </div>
     </section>
 
     <section class="blk" id="services" aria-labelledby="svc-h">
       <h2 class="sh" id="svc-h">Services. <small>02</small></h2>
       <div class="svc">
-        <div class="sv"><span class="n">01</span><h3>AI training &amp; data</h3><p>Data annotation and labelling, content evaluation, search quality rating and research for AI systems.</p><a class="disc" href="mailto:chinonsohensley@gmail.com?subject=AI%20training%20%26%20data">Discuss this service <span aria-hidden="true">↗</span></a></div>
-        <div class="sv"><span class="n">02</span><h3>Cybersecurity</h3><p>Security fundamentals, threat awareness and secure computing practice, backed by Google's cybersecurity training.</p><a class="disc" href="mailto:chinonsohensley@gmail.com?subject=Cybersecurity">Discuss this service <span aria-hidden="true">↗</span></a></div>
-        <div class="sv"><span class="n">03</span><h3>Software &amp; automation</h3><p>Python and C++ programs, bots and scripts that make repetitive work disappear.</p><a class="disc" href="mailto:chinonsohensley@gmail.com?subject=Software%20%26%20automation">Discuss this service <span aria-hidden="true">↗</span></a></div>
-        <div class="sv"><span class="n">04</span><h3>Web development</h3><p>Responsive websites in HTML, CSS and JavaScript that load fast and work for everyone.</p><a class="disc" href="mailto:chinonsohensley@gmail.com?subject=Web%20development">Discuss this service <span aria-hidden="true">↗</span></a></div>
-        <div class="sv"><span class="n">05</span><h3>Graphic design</h3><p>Graphics and digital content for clients and online platforms in Figma, Canva and Photoshop.</p><a class="disc" href="mailto:chinonsohensley@gmail.com?subject=Graphic%20design">Discuss this service <span aria-hidden="true">↗</span></a></div>
-        <div class="sv"><span class="n">06</span><h3>Technical troubleshooting</h3><p>Researching problems, finding root causes and fixing them, often remotely.</p><a class="disc" href="mailto:chinonsohensley@gmail.com?subject=Technical%20troubleshooting">Discuss this service <span aria-hidden="true">↗</span></a></div>
+        <div class="sv"><span class="n">01</span><h3>AI training &amp; data</h3><p>Data annotation and labelling, content evaluation, search quality rating and research for AI systems.</p></div>
+        <div class="sv"><span class="n">02</span><h3>Cybersecurity</h3><p>Security fundamentals, threat awareness and secure computing practice, backed by Google's cybersecurity training.</p></div>
+        <div class="sv"><span class="n">03</span><h3>Software &amp; automation</h3><p>Python and C++ programs, bots and scripts that make repetitive work disappear.</p></div>
+        <div class="sv"><span class="n">04</span><h3>Web development</h3><p>Responsive websites in HTML, CSS and JavaScript that load fast and work for everyone.</p></div>
+        <div class="sv"><span class="n">05</span><h3>Graphic design</h3><p>Graphics and digital content for clients and online platforms in Figma, Canva and Photoshop.</p></div>
+        <div class="sv"><span class="n">06</span><h3>Technical troubleshooting</h3><p>Researching problems, finding root causes and fixing them, often remotely.</p></div>
       </div>
-      <a class="scope" href="#resume">View my full resume ↗</a>
+      <a class="scope" href="mailto:chinonsohensley@gmail.com?subject=Services">Discuss services ↗</a>
     </section>
 
     <section class="blk" id="work" aria-labelledby="exp-h">
