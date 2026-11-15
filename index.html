@@ -70,6 +70,15 @@ section.blk{padding:88px 0 8px}
 .sh{display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:clamp(30px,7.6vw,48px);line-height:1.04;margin:0 0 6px;padding-bottom:26px;border-bottom:1px solid var(--line)}
 .sh small{font-family:'Geist Mono',monospace;font-weight:400;font-size:13px;letter-spacing:0;color:var(--muted)}
 
+/* intent band */
+.ask{margin-top:72px;background:#f2f4f9;border-top:1px solid var(--line)}
+.ask a{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:4px 16px;padding:28px 18px;border-bottom:1px solid #dfe3ec;text-decoration:none;color:var(--fg);max-width:none}
+.ask .k{grid-column:1;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.ask .v{grid-column:1;font-family:'Stack Sans Headline',sans-serif;font-weight:500;font-size:clamp(22px,5.8vw,32px);line-height:1.25;letter-spacing:-.02em;margin-top:8px}
+.ask .ar{grid-column:2;grid-row:1/3;color:var(--acc);font-size:24px;transition:transform .2s ease}
+.ask a:hover .ar{transform:translate(3px,-3px)}
+.ask a:hover{background:#e9edf6}
+
 /* work: numbered cards */
 .works{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
 .wk{position:relative;display:flex;flex-direction:column;justify-content:space-between;min-height:220px;padding:20px;border-radius:18px;background:var(--card);border:1px solid var(--line);text-decoration:none;color:var(--fg);overflow:hidden;transition:transform .3s ease,border-color .3s ease}
@@ -83,10 +92,17 @@ section.blk{padding:88px 0 8px}
 
 /* services */
 .svc{display:grid;grid-template-columns:minmax(0,1fr)}
-.sv{padding:26px 0;border-bottom:1px solid var(--line)}
-.sv .n{display:block;font-family:'Geist Mono',monospace;font-size:13px;color:var(--soft);margin-bottom:12px}
-.sv h3{font-size:clamp(23px,6vw,28px);margin:0}
-.sv p{margin:10px 0 0;color:var(--muted);font-size:16px;line-height:1.6}
+.svc{border:1px solid var(--line);gap:0}
+.sv{display:flex;flex-direction:column;padding:28px 22px 0;border-bottom:1px solid var(--line)}
+.sv:last-child{border-bottom:0}
+.sv .n{font-family:'Geist Mono',monospace;font-size:13px;color:var(--acc);margin-bottom:34px}
+.sv h3{font-size:clamp(30px,8.2vw,40px);line-height:1.04;letter-spacing:-.04em;margin:0}
+.sv p{margin:18px 0 0;color:var(--muted);font-size:17px;line-height:1.65;flex:1}
+.disc{display:flex;justify-content:space-between;align-items:center;margin-top:28px;padding:22px 0;border-top:1px solid var(--line);text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--fg)}
+.disc span{color:var(--acc);font-size:16px;transition:transform .2s ease}
+.disc:hover span{transform:translate(2px,-2px)}
+.scope{display:inline-block;margin-top:28px;padding-bottom:8px;border-bottom:1.5px solid var(--fg);text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.scope:hover{color:var(--acc);border-color:var(--acc)}
 
 /* experience */
 .xl{}
@@ -165,7 +181,12 @@ section.blk{padding:88px 0 8px}
   section.blk{padding:120px 0 8px}
   .works{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
   .wk{min-height:280px;padding:26px}
-  .svc{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:48px}
+  .svc{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .sv{border-right:1px solid var(--line)}
+  .sv:nth-child(3n){border-right:0}
+  .sv:nth-last-child(-n+3){border-bottom:0}
+  .sv:nth-child(-n+3){border-bottom:1px solid var(--line)}
+  .ask a{padding:30px max(40px,calc((100vw - 1080px)/2))}
   .ts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 48px}
   .ts .col{min-width:0}
   .fcols{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -204,6 +225,14 @@ section.blk{padding:88px 0 8px}
       <p class="t">I also design, so what I ship tends to look as considered as it runs.</p>
       <div class="cta"><a class="btn pri" href="#resume">View resume <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></a></div>
     </section>
+  </div>
+
+  <section class="ask" aria-label="Ways I can help">
+    <a href="mailto:chinonsohensley@gmail.com?subject=AI%20training%20%26%20data"><span class="k">Train an AI model</span><span class="v">Label, evaluate and rate data with care.</span><span class="ar" aria-hidden="true">↗</span></a>
+    <a href="mailto:chinonsohensley@gmail.com?subject=Cybersecurity"><span class="k">Secure a system</span><span class="v">Check the basics before attackers do.</span><span class="ar" aria-hidden="true">↗</span></a>
+    <a href="mailto:chinonsohensley@gmail.com?subject=Software%20%26%20automation"><span class="k">Build a tool</span><span class="v">Automate the work that eats your hours.</span><span class="ar" aria-hidden="true">↗</span></a>
+  </section>
+  <div class="wrap">
 
     <section class="blk" id="projects" aria-labelledby="work-h">
       <h2 class="sh" id="work-h">Projects. <small>01</small></h2>
@@ -241,13 +270,14 @@ async def on_message(m):
     <section class="blk" id="services" aria-labelledby="svc-h">
       <h2 class="sh" id="svc-h">Services. <small>02</small></h2>
       <div class="svc">
-        <div class="sv"><span class="n">01</span><h3>AI training &amp; data</h3><p>Data annotation and labelling, content evaluation, search quality rating and research for AI systems.</p></div>
-        <div class="sv"><span class="n">02</span><h3>Cybersecurity</h3><p>Security fundamentals, threat awareness and secure computing practice, backed by Google's cybersecurity training.</p></div>
-        <div class="sv"><span class="n">03</span><h3>Software &amp; automation</h3><p>Python and C++ programs, bots and scripts that make repetitive work disappear.</p></div>
-        <div class="sv"><span class="n">04</span><h3>Web development</h3><p>Responsive websites in HTML, CSS and JavaScript that load fast and work for everyone.</p></div>
-        <div class="sv"><span class="n">05</span><h3>Graphic design</h3><p>Graphics and digital content for clients and online platforms in Figma, Canva and Photoshop.</p></div>
-        <div class="sv"><span class="n">06</span><h3>Technical troubleshooting</h3><p>Researching problems, finding root causes and fixing them, often remotely.</p></div>
+        <div class="sv"><span class="n">01</span><h3>AI training &amp; data</h3><p>Data annotation and labelling, content evaluation, search quality rating and research for AI systems.</p><a class="disc" href="mailto:chinonsohensley@gmail.com?subject=AI%20training%20%26%20data">Discuss this service <span aria-hidden="true">↗</span></a></div>
+        <div class="sv"><span class="n">02</span><h3>Cybersecurity</h3><p>Security fundamentals, threat awareness and secure computing practice, backed by Google's cybersecurity training.</p><a class="disc" href="mailto:chinonsohensley@gmail.com?subject=Cybersecurity">Discuss this service <span aria-hidden="true">↗</span></a></div>
+        <div class="sv"><span class="n">03</span><h3>Software &amp; automation</h3><p>Python and C++ programs, bots and scripts that make repetitive work disappear.</p><a class="disc" href="mailto:chinonsohensley@gmail.com?subject=Software%20%26%20automation">Discuss this service <span aria-hidden="true">↗</span></a></div>
+        <div class="sv"><span class="n">04</span><h3>Web development</h3><p>Responsive websites in HTML, CSS and JavaScript that load fast and work for everyone.</p><a class="disc" href="mailto:chinonsohensley@gmail.com?subject=Web%20development">Discuss this service <span aria-hidden="true">↗</span></a></div>
+        <div class="sv"><span class="n">05</span><h3>Graphic design</h3><p>Graphics and digital content for clients and online platforms in Figma, Canva and Photoshop.</p><a class="disc" href="mailto:chinonsohensley@gmail.com?subject=Graphic%20design">Discuss this service <span aria-hidden="true">↗</span></a></div>
+        <div class="sv"><span class="n">06</span><h3>Technical troubleshooting</h3><p>Researching problems, finding root causes and fixing them, often remotely.</p><a class="disc" href="mailto:chinonsohensley@gmail.com?subject=Technical%20troubleshooting">Discuss this service <span aria-hidden="true">↗</span></a></div>
       </div>
+      <a class="scope" href="#resume">View my full resume ↗</a>
     </section>
 
     <section class="blk" id="work" aria-labelledby="exp-h">
